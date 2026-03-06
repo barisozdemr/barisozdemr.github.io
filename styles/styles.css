@@ -45,6 +45,7 @@ nav ul li a:hover{
     width:80%;
     margin:auto;
     display:flex;
+    gap:20px;
 }
 
 /* content */
@@ -52,7 +53,6 @@ nav ul li a:hover{
     width:70%;
     background:#ffe7b3;
     padding:15px;
-    margin-top:20px;
 }
 
 /* sidebar */
@@ -60,7 +60,6 @@ nav ul li a:hover{
     width:30%;
     background:#d9edf7;
     padding:15px;
-    margin-top:20px;
 }
 
 /* footer */
