@@ -44,12 +44,13 @@ nav ul li a:hover{
 .container{
     width:80%;
     margin:auto;
+    display:flex;
+    gap:20px;
 }
 
 /* content */
 .content{
-    display:inline-block;
-    width:60%;
+    width:65%;
     background:#ffe7b3;
     padding:15px;
     margin-top:20px;
