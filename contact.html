@@ -1,30 +1,100 @@
-
-
 <!DOCTYPE html>
+<html lang="tr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Hakkımda</title>
+    <title>İletişim</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<h1>
-    İletişim
-</h1>
+
+<body>
+
+<h1>İletişim</h1>
+
 <nav>
-    <a href="index.html">Ana Sayfa </a> <br>
-    <a href="about.html">Hakkımda </a> <br>
-    <a href="interests.html">İlgi Alanlarım </a> <br>
-    <a href="contact.html">İletişim </a>
+    <a href="index.html">Ana Sayfa</a> <br>
+    <a href="about.html">Hakkımda</a> <br>
+    <a href="interests.html">İlgi Alanlarım</a> <br>
+    <a href="contact.html">İletişim</a>
 </nav>
+
 <main>
-    <h2>İletişim Bilgilerim</h2>
-    <ul>
-        <li>umutbarisozdemir14@gmail.com</li>
-        <li>0552 280 00 84</li>
-    </ul>
-</main>
+
+<h2>İletişim Bilgilerim</h2>
+
+<ul>
+    <li>umutbarisozdemir14@gmail.com</li>
+    <li>0552 280 00 84</li>
+</ul>
+
 <hr>
+
+<div class="contact-container">
+
+<h2>Detaylı İletişim Formu</h2>
+
+<form>
+
+<label for="name">Ad Soyad:</label>
+<input type="text" id="name" placeholder="Örn: Asaf Karataş">
+
+<label for="email">E-posta Adresi:</label>
+<input type="email" id="email" placeholder="ornek@mail.com">
+
+<label for="password">Başvuru Takip Şifresi:</label>
+<input type="password" id="password" placeholder="şifrenizi girin">
+
+<label>İletişim Tercihi:</label>
+
+<div class="radio-group">
+<input type="radio" name="contactType"> Bana e-posta ile ulaşın <br>
+<input type="radio" name="contactType"> Bana telefonla ulaşın
+</div>
+
+<label>İlgi Alanları / Yetenekler:</label>
+
+<div class="checkbox-group">
+<input type="checkbox"> HTML <br>
+<input type="checkbox"> CSS <br>
+<input type="checkbox"> Algoritma
+</div>
+
+<label for="subject">Konu:</label>
+
+<select id="subject">
+<option>Lütfen bir konu seçin...</option>
+<option>İş Teklifi</option>
+<option>Soru</option>
+<option>Geri Bildirim</option>
+</select>
+
+<label>Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+
+<input type="file">
+
+<label for="message">Mesajınız:</label>
+
+<textarea id="message" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+<div class="buttons">
+
+<button type="submit" class="send">Gönder</button>
+
+<button type="reset" class="reset">Temizle</button>
+
+</div>
+
+</form>
+
+</div>
+
+</main>
+
+<hr>
+
 <footer>
-    <p>
-        &copy; 2026 Barış Özdemir, Tüm hakları saklıdır.
-    </p>
+<p>&copy; 2026 Barış Özdemir, Tüm hakları saklıdır.</p>
 </footer>
+
+</body>
 </html>
