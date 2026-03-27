@@ -183,8 +183,7 @@ body{
     height: 30vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;  /* ✅ */
-    gap: 12px;                    /* ✅ araya boşluk */
+    justify-content: space-between;
     background: rgba(255,255,255,0.72);
     border: 1px solid #e1e1e8;
     border-radius: 8px;
