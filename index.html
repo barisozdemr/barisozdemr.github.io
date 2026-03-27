@@ -1,69 +1,163 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>CSS Temel Ödev</title>
-<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Temel Ödev - Flexbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Barış Özdemir</h1>
-    <p>Bilgisayar Mühendisi - Game Developer</p>
-</header>
+<div class="wrapper">
 
-<nav>
-    <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımda</a></li>
-        <li><a href="interests.html">İlgi Alanlarım</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-    </ul>
-</nav>
+    <header class="navbar">
+        <div class="logo">LOGO</div>
 
-<main>
+        <nav class="menu">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Hakkında</a>
+            <a href="#">Dersler</a>
+            <a href="#">İletişim</a>
+        </nav>
+    </header>
 
-<div class="container">
+    <section class="chips-row">
+        <span class="chip">flex layout</span>
+        <span class="chip">justify-content</span>
+        <span class="chip">flex-direction</span>
+        <span class="chip">vh / vw</span>
+        <span class="chip">flex-grow</span>
+        <span class="chip">wrap</span>
+    </section>
 
-<div class="content">
-<h2>İçerik</h2>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hero Başlık</h1>
+            <p>Açıklama metni</p>
+            <div class="line"></div>
+            <div class="line short"></div>
+            <button>Buton</button>
 
-<p>
-Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleri ile
-metinler arasında boşluklar ve hizalamalar yapılabilir.
-</p>
+            <div class="section-tags">
+                <span class="chip">flex-direction: row</span>
+                <span class="chip">height: 30vh</span>
+                <span class="chip">align-items: stretch</span>
+            </div>
+        </div>
 
-<p>
-CSS ile kutuları yan yana getirmeyi ve sayfa düzeni oluşturmayı
-öğreniyoruz. Bu örnek temel bir uygulamadır.
-</p>
+        <div class="hero-image">
+            <div class="placeholder-icon"></div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="section-head">
+            <h2>Kartlar Bölümü</h2>
+            <div class="section-tags">
+                <span class="chip">multiple items</span>
+                <span class="chip">flex layout - wrap</span>
+            </div>
+        </div>
+
+        <div class="cards">
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+
+            <article class="card">
+                <h3>Kart Başlığı</h3>
+                <p>Kısa açıklama</p>
+                <div class="mini-line"></div>
+                <div class="mini-line short"></div>
+                <button>Buton</button>
+            </article>
+        </div>
+
+        <div class="section-tags bottom-tags">
+            <span class="chip">gap + hizalama</span>
+            <span class="chip">height: 30vh</span>
+            <span class="chip">flex-wrap</span>
+        </div>
+    </section>
+
+    <section class="grow-section">
+        <div class="section-head">
+            <h2>Flex Grow Uygulama</h2>
+            <div class="section-tags">
+                <span class="chip">flex-grow</span>
+                <span class="chip">height: 20vh</span>
+                <span class="chip">stretch (esneme)</span>
+            </div>
+        </div>
+
+        <div class="grow-row">
+            <div class="grow-box box1">
+                <h3>1 Kutu</h3>
+                <p>flex-grow: 1;</p>
+                <button>Buton</button>
+            </div>
+
+            <div class="grow-box box2">
+                <h3>2 Kutu</h3>
+                <p>flex-grow: 2;</p>
+                <button>Buton</button>
+            </div>
+
+            <div class="grow-box box3">
+                <h3>3 Kutu</h3>
+                <p>flex-grow: 1;</p>
+                <button>Buton</button>
+            </div>
+        </div>
+
+        <div class="section-tags bottom-tags">
+            <span class="chip">flex-grow</span>
+            <span class="chip">height: 20vh</span>
+            <span class="chip">stretch (esneme)</span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 - Temel Flexbox Örneği</p>
+    </footer>
 
 </div>
-
-<aside class="sidebar">
-
-<h2>Yan Menü / Bilgi</h2>
-
-<p>
-Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik,
-yükseklik, margin ve padding özellikleri kullanılarak düzenlenir.
-</p>
-
-<p>
-Seçiciler kullanarak farklı bölümlere farklı stiller
-uygulanabilir.
-</p>
-
-</aside>
-
-</div>
-
-</main>
-
-<footer>
-<p>© 2026 Barış Özdemir - Tüm hakları saklıdır.</p>
-</footer>
 
 </body>
-</html> 
+</html>
