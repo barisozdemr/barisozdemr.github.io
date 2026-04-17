@@ -2,162 +2,171 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Temel Ödev - Flexbox</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Uygulamalar</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 5px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .card {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <header class="navbar">
-        <div class="logo">LOGO</div>
+    <!-- Uygulama 1 -->
+    <h2>Öğrenci Not Hesaplama</h2>
+    <div class="card">
+        <input type="text" id="name" placeholder="Ad Soyad">
+        <input type="number" id="vize" placeholder="Vize Notu">
+        <input type="number" id="final" placeholder="Final Notu">
+        <button onclick="hesaplaNot()">Hesapla</button>
 
-        <nav class="menu">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="about.html">Hakkında</a>
-            <a href="interests.html">İlgi Alanlarım</a>
-            <a href="contact.html">İletişim</a>
-        </nav>
-    </header>
+        <div id="notSonuc" class="result"></div>
+    </div>
 
-    <section class="chips-row">
-        <span class="chip">flex layout</span>
-        <span class="chip">justify-content</span>
-        <span class="chip">flex-direction</span>
-        <span class="chip">vh / vw</span>
-        <span class="chip">flex-grow</span>
-        <span class="chip">wrap</span>
-    </section>
+    <!-- Uygulama 2 -->
+    <h2>Birim Dönüştürücü</h2>
+    <div class="flex">
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Hero Başlık</h1>
-            <p>Açıklama metni</p>
-            <div class="line"></div>
-            <div class="line short"></div>
-            <button>Buton</button>
-
-            <div class="section-tags">
-                <span class="chip">flex-direction: row</span>
-                <span class="chip">height: 30vh</span>
-                <span class="chip">align-items: stretch</span>
-            </div>
+        <!-- Kart 1 -->
+        <div class="card">
+            <input type="number" id="value1" placeholder="Değer giriniz">
+            <select id="type1">
+                <option value="m_km">Metre → Kilometre</option>
+                <option value="km_m">Kilometre → Metre</option>
+                <option value="c_f">Celsius → Fahrenheit</option>
+                <option value="f_c">Fahrenheit → Celsius</option>
+                <option value="kg_g">Kilogram → Gram</option>
+                <option value="g_kg">Gram → Kilogram</option>
+            </select>
+            <button onclick="convert(1)">Hesapla</button>
+            <div id="result1" class="result"></div>
         </div>
 
-        <div class="hero-image">
-            <div class="placeholder-icon"></div>
-        </div>
-    </section>
-
-    <section class="cards-section">
-        <div class="section-head">
-            <h2>Kartlar Bölümü</h2>
-            <div class="section-tags">
-                <span class="chip">multiple items</span>
-                <span class="chip">flex layout - wrap</span>
-            </div>
-        </div>
-
-        <div class="cards">
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
-
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
-
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
-
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
-
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
-
-            <article class="card">
-                <h3>Kart Başlığı</h3>
-                <p>Kısa açıklama</p>
-                <div class="mini-line"></div>
-                <div class="mini-line short"></div>
-                <button>Buton</button>
-            </article>
+        <!-- Kart 2 -->
+        <div class="card">
+            <input type="number" id="value2" placeholder="Değer giriniz">
+            <select id="type2">
+                <option value="m_km">Metre → Kilometre</option>
+                <option value="km_m">Kilometre → Metre</option>
+                <option value="c_f">Celsius → Fahrenheit</option>
+                <option value="f_c">Fahrenheit → Celsius</option>
+                <option value="kg_g">Kilogram → Gram</option>
+                <option value="g_kg">Gram → Kilogram</option>
+            </select>
+            <button onclick="convert(2)">Hesapla</button>
+            <div id="result2" class="result"></div>
         </div>
 
-        <div class="section-tags bottom-tags">
-            <span class="chip">gap + hizalama</span>
-            <span class="chip">height: 30vh</span>
-            <span class="chip">flex-wrap</span>
-        </div>
-    </section>
-
-    <section class="grow-section">
-        <div class="section-head">
-            <h2>Flex Grow Uygulama</h2>
-            <div class="section-tags">
-                <span class="chip">flex-grow</span>
-                <span class="chip">height: 20vh</span>
-                <span class="chip">stretch (esneme)</span>
-            </div>
-        </div>
-
-        <div class="grow-row">
-            <div class="grow-box box1">
-                <h3>1 Kutu</h3>
-                <p>flex-grow: 1;</p>
-                <button>Buton</button>
-            </div>
-
-            <div class="grow-box box2">
-                <h3>2 Kutu</h3>
-                <p>flex-grow: 2;</p>
-                <button>Buton</button>
-            </div>
-
-            <div class="grow-box box3">
-                <h3>3 Kutu</h3>
-                <p>flex-grow: 1;</p>
-                <button>Buton</button>
-            </div>
-        </div>
-
-        <div class="section-tags bottom-tags">
-            <span class="chip">flex-grow</span>
-            <span class="chip">height: 20vh</span>
-            <span class="chip">stretch (esneme)</span>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>© 2026 - Temel Flexbox Örneği</p>
-    </footer>
+    </div>
 
 </div>
+
+<script>
+    function hesaplaNot() {
+        let name = document.getElementById("name").value;
+        let vize = parseFloat(document.getElementById("vize").value);
+        let final = parseFloat(document.getElementById("final").value);
+
+        if (isNaN(vize) || isNaN(final)) {
+            alert("Notları gir");
+            return;
+        }
+
+        let ort = vize * 0.4 + final * 0.6;
+        let harf = "";
+        let durum = ort >= 50 ? "Geçti" : "Kaldı";
+
+        if (ort >= 90) harf = "AA";
+        else if (ort >= 85) harf = "BA";
+        else if (ort >= 70) harf = "BB";
+        else if (ort >= 60) harf = "CB";
+        else if (ort >= 50) harf = "CC";
+        else harf = "FF";
+
+        document.getElementById("notSonuc").innerHTML = `
+            <b>${name}</b><br>
+            Ortalama: ${ort.toFixed(2)}<br>
+            Harf Notu: ${harf}<br>
+            Durum: ${durum}
+        `;
+    }
+
+    function convert(id) {
+        let value = parseFloat(document.getElementById("value" + id).value);
+        let type = document.getElementById("type" + id).value;
+        let result;
+
+        if (isNaN(value)) {
+            alert("Değer gir");
+            return;
+        }
+
+        switch(type) {
+            case "m_km": result = value / 1000; break;
+            case "km_m": result = value * 1000; break;
+            case "c_f": result = (value * 9/5) + 32; break;
+            case "f_c": result = (value - 32) * 5/9; break;
+            case "kg_g": result = value * 1000; break;
+            case "g_kg": result = value / 1000; break;
+        }
+
+        document.getElementById("result" + id).innerText = "Sonuç: " + result;
+    }
+</script>
 
 </body>
 </html>
